@@ -2,7 +2,7 @@
 
 namespace EFCoreInMemory.Models.ChangeModels
 {
-    public static class ChangeModel
+	public static class ChangeModel
 	{
 		public static CustomerDataModel Change(this CreateCustomerRequestModel requestModel)
 		{
@@ -12,7 +12,7 @@ namespace EFCoreInMemory.Models.ChangeModels
 				CustomerName = requestModel.CustomerName,
 				Email = requestModel.Email,
 				Age = requestModel.Age
-            };
+			};
 
 			return model;
         }
