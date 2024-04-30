@@ -32,7 +32,7 @@ namespace EFCoreInMemory.Repositories.Implementations
         }
 
         public async Task<List<CustomerDataModel>> GetCustomers()
-        {;
+        {
             try
             {
                 return await _appDbContext.Customers
