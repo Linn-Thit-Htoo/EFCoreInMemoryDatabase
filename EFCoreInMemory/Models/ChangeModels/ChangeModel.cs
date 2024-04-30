@@ -15,6 +15,6 @@ namespace EFCoreInMemory.Models.ChangeModels
 			};
 
 			return model;
-        }
+		}
 	}
 }
