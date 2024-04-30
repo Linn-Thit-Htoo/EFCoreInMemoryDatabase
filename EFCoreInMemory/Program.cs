@@ -1,15 +1,30 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using EFCoreInMemory.Data;
+using EFCoreInMemory.Extenstions;
+using EFCoreInMemory.Repositories.Implementations;
+using EFCoreInMemory.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.AddControllers().AddJsonOptions(opt =>
+{
+    opt.JsonSerializerOptions.PropertyNamingPolicy = null;
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseInMemoryDatabase("DbName");
+}, ServiceLifetime.Transient);
+
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+await app.AddCustomer();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

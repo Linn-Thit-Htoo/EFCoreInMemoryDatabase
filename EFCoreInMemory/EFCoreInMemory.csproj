@@ -11,6 +11,32 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.17" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.14" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Controllers\" />
+    <None Remove="Models\" />
+    <None Remove="Data\" />
+    <None Remove="Extenstions\" />
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Interfaces\" />
+    <None Remove="Repositories\Implementations\" />
+    <None Remove="Models\RequestModel\" />
+    <None Remove="Models\Entities\" />
+    <None Remove="Models\ChangeModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Data\" />
+    <Folder Include="Extenstions\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Interfaces\" />
+    <Folder Include="Repositories\Implementations\" />
+    <Folder Include="Models\RequestModel\" />
+    <Folder Include="Models\Entities\" />
+    <Folder Include="Models\ChangeModels\" />
+  </ItemGroup>
 </Project>
