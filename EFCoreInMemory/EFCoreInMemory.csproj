@@ -29,14 +29,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
     <Folder Include="Data\" />
     <Folder Include="Extenstions\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Repositories\Interfaces\" />
-    <Folder Include="Repositories\Implementations\" />
     <Folder Include="Models\RequestModel\" />
     <Folder Include="Models\Entities\" />
-    <Folder Include="Models\ChangeModels\" />
   </ItemGroup>
 </Project>

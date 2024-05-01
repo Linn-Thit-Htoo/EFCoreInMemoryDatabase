@@ -1,13 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace EFCoreInMemory.Models
+namespace EFCoreInMemory.Models.Entities;
+
+public class CustomerDataModel
 {
-    public class CustomerDataModel
-	{
-		[Key]
-		public string CustomerId { get; set; } = null!;
-		public string CustomerName { get; set; } = null!;
-		public string Email { get; set; } = null!; // the value will not be null despite its initial assignment
-        public int Age { get; set; }
-    }
+    [Key]
+    public string CustomerId { get; set; } = null!;
+    public string CustomerName { get; set; } = null!;
+    public string Email { get; set; } = null!; // the value will not be null despite its initial assignment
+    public int Age { get; set; }
 }

@@ -1,7 +1,6 @@
 ﻿using EFCoreInMemory.Data;
 using EFCoreInMemory.Extenstions;
-using EFCoreInMemory.Repositories.Implementations;
-using EFCoreInMemory.Repositories.Interfaces;
+using EFCoreInMemory.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,4 +37,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
